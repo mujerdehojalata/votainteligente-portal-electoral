@@ -18,10 +18,10 @@ addons:
             - python-pgmagick
             - postgresql-client
         
-    sonarcloud: 
-      organization: "pruebas" 
-      token: 
-          secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
+        sonarcloud: 
+          organization: "pruebas" 
+          token: 
+              secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
                             
   
 install:
