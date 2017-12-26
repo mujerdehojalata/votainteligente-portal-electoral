@@ -17,6 +17,12 @@ addons:
             - libboost-python-dev
             - python-pgmagick
             - postgresql-client
+     sonarcloud: 
+            organization: "pruebas" 
+            token: 
+                secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
+            branches: 
+            - master
             
   
 install:
@@ -32,12 +38,10 @@ script:
   - wget -q --waitretry=1 --retry-connrefused -T 10 -O - http://127.0.0.1:9200
   - coverage run manage.py test --noinput
   - coverage report -m
+  - sonar-scanner
+  
 after_script:
   - coveralls --verbose
+  
 
-    sonarcloud: 
-            organization: "pruebas" 
-            token: 
-                secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
-            branches: 
-            - master
+    
