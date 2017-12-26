@@ -16,7 +16,10 @@ addons:
             - libboost-python-dev
             - python-pgmagick
             - postgresql-client
-   
+            
+before_install:
+  - rvm default
+  
 install:
   - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
   - tar -xzf elasticsearch-2.4.1.tar.gz
