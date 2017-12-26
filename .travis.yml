@@ -19,6 +19,7 @@ addons:
             
 before_install:
   - rvm default
+  - gem install travis
   
 install:
   - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
