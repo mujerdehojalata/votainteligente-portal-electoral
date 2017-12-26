@@ -8,6 +8,7 @@ services:
   - redis-server
 python:
   - "2.7"
+  - "nightly"
 addons:
     apt:
         packages:
@@ -17,9 +18,6 @@ addons:
             - python-pgmagick
             - postgresql-client
             
-before_install:
-  - rvm default
-  - gem install travis
   
 install:
   - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
@@ -30,6 +28,7 @@ install:
   - pip install psycopg2
 # command to run tests
 script:
+  - pytest
   - wget -q --waitretry=1 --retry-connrefused -T 10 -O - http://127.0.0.1:9200
   - coverage run manage.py test --noinput
   - coverage report -m
