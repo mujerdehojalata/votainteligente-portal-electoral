@@ -8,7 +8,6 @@ services:
   - redis-server
 python:
   - "2.7"
-  - "nightly"
 addons:
     apt:
         packages:
