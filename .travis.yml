@@ -17,13 +17,12 @@ addons:
             - libboost-python-dev
             - python-pgmagick
             - postgresql-client
-     sonarcloud: 
-            organization: "pruebas" 
-            token: 
-                secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
-            branches: 
-            - master
-            
+        
+    sonarcloud: 
+      organization: "pruebas" 
+      token: 
+          secure: "f705632edb6ad170ca1b14e05f4cfc586110dcf7" 
+                            
   
 install:
   - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
