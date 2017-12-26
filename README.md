@@ -63,7 +63,7 @@ And hit http://localhost:8000/.
 
 ## Theming
 
-### Previously created themes
+#### Previously created themes
 
 * [votainteligente-venezuela-theme](https://github.com/ciudadanointeligente/votainteligente-venezuela-theme) is the theme for [eligetucandidato.org](http://eligetucandidato.org/)
 
