@@ -10,7 +10,11 @@ services:
 python:
   - "2.7"
 addons:
-    apt:
+  - sonarcloud: 
+      organization: "pruebas" 
+      token: 
+          secure: "uTlji8SljEbZ6im8vSKa+6ZbNVvRLbtaMzERbH3BDQ3QVyigncWDUPJU9a+pM8AlX+4mq4N9MIweEHn12RHMFpL2Kv3lu7IeKToL9BjPuh80RJ0kuAVH9hKJrzHThqQcjHS5fVd10CdDR9qxLWLlCGjNh2pCUgYU1md32aY1ocrCweNlGedpPkeZCO41cWQUyYKz6q7iSqZ+f4KMB6xugVKOUyXYKH1LrPkoyCVRtz4dNGiZ9fZdd6zXVldA0lb9cWnKdQn7s/PCY9+KdXWgJA5lNxAWNxyUUBtu1JzyFrjNjwXlya3YMxD8tufBqLc9iONtBArRWRtNCjhVWqGNAY34JHAW4rUBauTWcnyFFXUUVBYUGuoxw8DjqvYKUjYw56wvOTMhvZ4hTf3ii8r1d5RwaJhgb2+UUjinek85Wl4tgUQ6/8y1Yp+iOQQtaHNa+48SDku0bOYTccdRvAlD0ryB56JjIYhO1+8YL5UrpikK03P3g3gmVQlxfbQ237ITw18Rp+Sm1O0FHp+czu7BweBhNliXCf9NtR07s8m8+JpGiZCsPViuTg7nfs1D952pXmlJhBBOvTyj9eseyJc7An+mrK9ihHmBpJGELjU27/RYMFvixZn5rdPCNs6pRQtJAX7wwj/UvGP4qToUDwHHmiTgKKHXtFVBHeXtTkweED0=" 
+  - apt:
         packages:
             - python-pgmagick
             - libgraphicsmagick++1-dev
@@ -18,11 +22,7 @@ addons:
             - python-pgmagick
             - postgresql-client
         
-      sonarcloud: 
-        organization: "pruebas" 
-        token: 
-            secure: "uTlji8SljEbZ6im8vSKa+6ZbNVvRLbtaMzERbH3BDQ3QVyigncWDUPJU9a+pM8AlX+4mq4N9MIweEHn12RHMFpL2Kv3lu7IeKToL9BjPuh80RJ0kuAVH9hKJrzHThqQcjHS5fVd10CdDR9qxLWLlCGjNh2pCUgYU1md32aY1ocrCweNlGedpPkeZCO41cWQUyYKz6q7iSqZ+f4KMB6xugVKOUyXYKH1LrPkoyCVRtz4dNGiZ9fZdd6zXVldA0lb9cWnKdQn7s/PCY9+KdXWgJA5lNxAWNxyUUBtu1JzyFrjNjwXlya3YMxD8tufBqLc9iONtBArRWRtNCjhVWqGNAY34JHAW4rUBauTWcnyFFXUUVBYUGuoxw8DjqvYKUjYw56wvOTMhvZ4hTf3ii8r1d5RwaJhgb2+UUjinek85Wl4tgUQ6/8y1Yp+iOQQtaHNa+48SDku0bOYTccdRvAlD0ryB56JjIYhO1+8YL5UrpikK03P3g3gmVQlxfbQ237ITw18Rp+Sm1O0FHp+czu7BweBhNliXCf9NtR07s8m8+JpGiZCsPViuTg7nfs1D952pXmlJhBBOvTyj9eseyJc7An+mrK9ihHmBpJGELjU27/RYMFvixZn5rdPCNs6pRQtJAX7wwj/UvGP4qToUDwHHmiTgKKHXtFVBHeXtTkweED0=" 
-                            
+     
   
 install:
   - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.1/elasticsearch-2.4.1.tar.gz
